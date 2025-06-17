@@ -4,6 +4,9 @@ import reviewsRouter from './routes/review.routes.js';
 const app = express();
 
 //configure middleware (static folder for /public and router...)
+app.use(express.static("public"));
+
+app.get('/', reviewsRouter);
 
 const PORT = 3000;
 
